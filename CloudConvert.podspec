@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CloudConvert"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "Convert between 200 supported file formats"
 
   s.description  = <<-DESC
@@ -21,16 +21,16 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT"
 
-  s.author             = { "Josias Montag" => "josias@montag.info" }
+  s.author             = { "Josias Montag" => "josias@montag.info", "Jason Boggess" => "jason@jasonboggess.com" }
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.11'
 
   s.source = { :git => 'https://github.com/cloudconvert/cloudconvert-swift.git', :tag => s.version }
 
   s.source_files = 'CloudConvert/*.swift'
 
-  s.dependency "Alamofire", "~> 3.4"
+  s.dependency "Alamofire", "~> 4.4"
   
 
 end
