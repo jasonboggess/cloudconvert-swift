@@ -30,12 +30,6 @@ import Alamofire
 
 extension String: Error {}
 
-extension String {
-    var asUrlConvertable: Alamofire.URLConvertible {
-        return URL(string: self)!
-    }
-}
-
 public let apiProtocol = "https"
 public let apiHost = "api.cloudconvert.com"
 public var apiKey: String = "" {
@@ -81,7 +75,7 @@ private func urlRequest(_ method: Alamofire.HTTPMethod, urlString: String) throw
         urlString = apiProtocol + "://" + apiHost + urlString
     }
 
-    var urlRequest: URLRequest = try URLRequest(url: urlString.asUrlConvertable.asURL())
+    var urlRequest: URLRequest = try URLRequest(url: urlString.asURL())
     urlRequest.httpMethod = method.rawValue
 
     return urlRequest
